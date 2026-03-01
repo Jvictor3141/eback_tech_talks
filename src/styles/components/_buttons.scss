@@ -1,3 +1,5 @@
+@use '../variaveis';
+
 .button {
     padding: 12px;
     font-size: 18px;
@@ -6,9 +8,15 @@
     text-align: center;
     white-space: nowrap;
 
+    
     &--primary {
-        color: #fff;
-        background-color: #4F2AC3;
+        color: variaveis.$textColor;
+        background-color: variaveis.$color1;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: variaveis.$color3;
+        }
     }
 
     @media (max-width: 640px) {
